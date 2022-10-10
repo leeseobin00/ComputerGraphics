@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+// we declare the same varying in the Fragment Shader
+varying vec4 fColor;
+
+void
+main()
+{
+    gl_Position = vPosition;
+	fColor = gl_Position * 0.5 + 0.5;	// fColor에 위치에 대한 상대 정보를 넣었다. 
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+// we declare the same varying in the Fragment Shader
+// WebGL will link the varying pair between the Vertex and the Fragment Shader. 
+precision mediump float;
+varying vec4 fColor;
+
+void
+main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="07_triangle_varying.js"></script>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>
