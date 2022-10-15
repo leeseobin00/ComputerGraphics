@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+uniform vec4 uOffset;
+
+void
+main()
+{
+    gl_Position = vPosition + uOffset;	// gl_Position - vertex location
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+uniform vec4 uColor;
+
+void
+main()
+{
+    gl_FragColor = uColor;	// gl_FragColor - vertex color
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+	<!-- Standard utilities for setting up WebGL context in Common directory -->
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+	<!-- Contains JS and WebGL code for reading, compiling and linking the shaders -->
+<script type="text/javascript" src="../Common/MV.js"></script>
+	<!-- matrix / vector operation helper package -->
+<script type="text/javascript" src="landscape.js"></script>
+	<!-- the application file -->
+</head>
+
+
+<body>
+<b>201935096 이서빈</b>
+<br>
+<canvas id="gl-canvas" width="512" height="512">
+	<!-- A Canvas defines a rendering plane where vertex are defined and drawn via JavaScript WebGL APIs -->
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>
