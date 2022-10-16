@@ -14,6 +14,7 @@ main()
 {
     gl_Position = vPosition;
     fColor = vColor;
+    gl_PointSize = 10.0;
 }
 </script>
 
@@ -22,6 +23,7 @@ main()
 precision mediump float;
 
 varying vec4 fColor;
+
 void
 main()
 {
@@ -32,7 +34,7 @@ main()
 <script type="text/javascript" src="../Common/webgl-utils.js"></script>
 <script type="text/javascript" src="../Common/initShaders.js"></script>
 <script type="text/javascript" src="../Common/MV.js"></script>
-<script type="text/javascript" src="27_triangle_resize.js"></script>
+<script type="text/javascript" src="squarem.js"></script>
 
 <body>
 

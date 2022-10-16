@@ -348,12 +348,12 @@ window.onload = function init()
 	gl.uniform4f(colorLoc, 0.0, 0.6, 0.8, 1.0);
 	gl.drawArrays( gl.TRIANGLE_FAN, 0, 7 );
 	
-	// Draw First Fish Tail
+	// Draw Fish Tail
 	gl.bufferData( gl.ARRAY_BUFFER, flatten(tailVertices), gl.STATIC_DRAW );
 	gl.uniform4f(colorLoc, 0.3, 0.6, 1.0, 1.0);
 	gl.drawArrays( gl.TRIANGLES, 0, 6 );
 	
-	// Draw Second Fish Tail
+	// Draw Second Fish eye
 	gl.bufferData( gl.ARRAY_BUFFER, flatten(eyeVertices), gl.STATIC_DRAW );
 	gl.uniform4f(colorLoc, 0.0, 0.0, 0.0, 1.0);
 	gl.drawArrays( gl.TRIANGLES, 0, 6 );

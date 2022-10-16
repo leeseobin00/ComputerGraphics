@@ -12,7 +12,7 @@ void main()
     float s = sin( theta );
     float c = cos( theta );
 
-    gl_Position.x =  c * vPosition.x - s * vPosition.y;
+    gl_Position.x =  c * vPosition.x - s * vPosition.y ;
     gl_Position.y =  s * vPosition.x + c * vPosition.y;
     gl_Position.z = 0.0;
     gl_Position.w = 1.0;
@@ -32,7 +32,7 @@ void main()
 <script type="text/javascript" src="../Common/webgl-utils.js"></script>
 <script type="text/javascript" src="../Common/initShaders.js"></script>
 <script type="text/javascript" src="../Common/MV.js"></script>
-<script type="text/javascript" src="19_rotatingSquare2_2.js"></script>
+<script type="text/javascript" src="rotatingSquare2.js"></script>
 </head>
 
 <body>
